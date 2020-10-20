@@ -1,0 +1,250 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px; }
+
+img {
+  max-width: 100%; }
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  line-height: 1;
+  font-family: "Oswald", sans-serif;
+  color: #A59678; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+  ul li {
+    list-style: none; }
+  ul a {
+    text-decoration: none; }
+
+.container {
+  width: 85%;
+  margin: 0 auto; }
+
+nav {
+  padding: .75em 0;
+  background-color: #2E323F;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  position: relative;
+  /* THIS PORTION OF CODE CREATES AN OPEN AND CLOSE MENU ICON DESIGN. THIS CODE IS REUSABLE */
+  /* Designing the open menu icon */
+  /* Designing the close menu icon */
+  /* MENU ICON DESIGN STYLES END HERE. SEE THE STYLES ABOVE */ }
+  nav .menu {
+    display: inline-block;
+    background: #A59678;
+    color: #fff;
+    padding: 1em .5em;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer; }
+  nav .menu:hover,
+  nav .menu:focus {
+    opacity: .9; }
+  nav .hamburger,
+  nav .hamburger::before,
+  nav .hamburger::after {
+    display: block;
+    background: white;
+    border-radius: 30px;
+    height: 5px;
+    position: relative;
+    transition: transform .5s ease; }
+  nav .hamburger::before,
+  nav .hamburger::after {
+    content: '';
+    padding: 0 15px; }
+  nav .hamburger::before {
+    transform: translateY(-9px); }
+  nav .hamburger::after {
+    transform: translateY(4px); }
+  nav .menu.close-menu {
+    background: #fff;
+    transform: rotate(45deg);
+    transition: transform .5s ease; }
+  nav .menu.close-menu > .hamburger {
+    background: #2E323F; }
+  nav .menu.close-menu > .hamburger:before,
+  nav .menu.close-menu > .hamburger:after {
+    transform: rotate(90deg);
+    background: #2E323F;
+    transition: none; }
+  nav .menu.close-menu > .hamburger:after {
+    bottom: 4px; }
+  nav a {
+    color: white; }
+  nav a:hover,
+  nav a:focus {
+    opacity: .7;
+    text-decoration: underline; }
+  nav .logo-link {
+    position: absolute;
+    left: 50%;
+    top: 35%; }
+
+.nav-links {
+  padding: 1.5em 1.5em 0;
+  background: #2E323F;
+  opacity: .9;
+  border-radius: 10px;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 1em;
+  display: none;
+  position: absolute;
+  top: 4.7em;
+  left: 0; }
+  .nav-links li {
+    margin-bottom: 2em; }
+  .nav-links .hero-button {
+    margin-top: 0; }
+
+.showNav-links {
+  display: inline-flex; }
+
+.hero {
+  padding: 3.75em 0;
+  background: #3B4050;
+  color: white; }
+  .hero h1 {
+    font-size: 50px;
+    margin-bottom: 1.3em;
+    line-height: 1.1; }
+
+.uncoloured-title {
+  color: white; }
+
+.hero-button {
+  background-color: #A59678;
+  padding: .75em 1.2em;
+  border-radius: 50px;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bolder;
+  font-size: 18px;
+  font-family: "Oswald", sans-serif;
+  cursor: pointer;
+  border: none;
+  margin-top: 1.2em; }
+
+.hero-button:hover,
+.hero-button:focus {
+  opacity: .8; }
+
+section {
+  padding: 3.75em 0;
+  background-color: #F1F1F1;
+  text-align: center; }
+
+section .col-2,
+section .col-3 {
+  margin-top: 3em; }
+
+article {
+  padding: 2em 0;
+  font-size: 21px; }
+
+.aside-card {
+  padding: 2em;
+  max-width: 300px;
+  background: #3B4050;
+  color: white;
+  text-align: center;
+  margin-bottom: 2em; }
+  .aside-card h2 {
+    color: white; }
+
+footer {
+  background-color: #3B4050;
+  padding: 3.75em 0;
+  color: #6F737F; }
+  footer h1 {
+    color: white;
+    font-size: 32px;
+    text-align: center; }
+  footer h3 {
+    margin-top: 2em; }
+  footer li {
+    padding: .5em 0; }
+  footer a {
+    color: #6F737F; }
+  footer a:hover,
+  footer a:focus {
+    color: white;
+    opacity: .75; }
+
+@media (min-width: 700px) {
+  p,
+  h1 {
+    max-width: 550px; }
+  section .flex {
+    display: flex;
+    justify-content: space-between; }
+  section .col-2,
+  section .col-3 {
+    margin-top: 0; }
+  section .col {
+    width: 27%; }
+  aside {
+    display: flex;
+    justify-content: space-between; }
+  .aside-card + .aside-card {
+    margin-left: 1em; } }
+
+@media (min-width: 1000px) {
+  p,
+  h1 {
+    max-width: none; }
+  .flex {
+    display: flex;
+    justify-content: space-between; }
+  nav {
+    padding: .75em; }
+    nav img {
+      display: inline; }
+    nav a {
+      align-self: center; }
+    nav .logo-link {
+      left: 7.5%; }
+    nav .flex {
+      justify-content: flex-end; }
+  .nav-links {
+    padding: 0;
+    display: inline-flex;
+    flex-direction: row;
+    margin-bottom: 0;
+    position: inherit; }
+    .nav-links li {
+      margin: 0 0 0 1.5em; }
+  .menu {
+    visibility: hidden;
+    position: absolute; }
+  .hero h1 {
+    font-size: 90px;
+    margin-bottom: .75em; }
+  .hero .flex {
+    align-items: center; }
+  .hero-content {
+    font-size: 24px;
+    margin-left: 1.5em; }
+  aside {
+    display: block;
+    margin-top: 3em;
+    width: 30%; }
+  .aside-card + .aside-card {
+    margin-left: 0; }
+  article {
+    width: 60%; }
+    article h2 {
+      font-size: 36px; }
+  .footer-title {
+    font-size: 36px; }
+  .about-company {
+    width: 40%; } }
